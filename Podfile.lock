@@ -1,4 +1,5 @@
 PODS:
+  - Font-Awesome-Swift (1.4.7)
   - KIF (3.4.2):
     - KIF/Core (= 3.4.2)
   - KIF/Core (3.4.2)
@@ -19,17 +20,19 @@ PODS:
   - Quick (0.9.2)
 
 DEPENDENCIES:
+  - Font-Awesome-Swift (~> 1.4)
   - KIF (~> 3.0)
   - Nimble
   - OHHTTPStubs
   - Quick
 
 SPEC CHECKSUMS:
+  Font-Awesome-Swift: 0131fd0f683ac024ce9abf1fdbc9fb482150ce49
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
   Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   OHHTTPStubs: 592f74439d2d72615115cf99a954237a3fbe26e5
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: 6d23702a9349ad9c40c94c7cb65437249566baf5
+PODFILE CHECKSUM: 1c6e6d04085d1674d30d823aa5786a46c2b01755
 
 COCOAPODS: 1.0.1

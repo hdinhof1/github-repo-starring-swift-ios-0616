@@ -21,6 +21,7 @@ class ReposDataStore {
             for dictionary in reposArray {
                 guard let repoDictionary = dictionary as? NSDictionary else { fatalError("Object in reposArray is of non-dictionary type") }
                 let repository = GithubRepository(dictionary: repoDictionary)
+                
                 self.repositories.append(repository)
                 
             }
@@ -28,4 +29,21 @@ class ReposDataStore {
         }
     }
 
+    func toggleStarStatusForRepository(repository: GithubRepository, completion:(Bool) -> ()) {
+        GithubAPIClient.checkIfRepositoryIsStarred(repository.fullName) { (starred) in
+            if starred {
+                GithubAPIClient.unStarRepository(repository.fullName, completion: { 
+                    print("unstarring repo")
+                    completion(false)
+                })
+                
+            } else {
+                GithubAPIClient.starRepository(repository.fullName, completion: { 
+                    print("starring repo")
+                    completion(true)
+                })
+            }
+        }
+        
+    }
 }

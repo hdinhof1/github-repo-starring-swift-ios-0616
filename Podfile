@@ -6,6 +6,7 @@ target 'github-repo-starring-swift' do
   use_frameworks!
 
   pod 'OHHTTPStubs'
+  pod 'Font-Awesome-Swift', '~> 1.4'
 
   # Pods for github-repo-starring-swift
 
